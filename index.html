@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Marie Sibulan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Portfolio</h1>
+      <img src="C:\Users\ACER\Desktop\web-profile\img\logo.png" alt="Logo" />
+    </header>
+    <div class="mySlides fade">
+      <img src="img\bg.jpg" style="width: 100%" />
+      <div class="text">
+        <p>Hi! I'm</p>
+        <h3>ROSE SIBULAN</h3>
+        <p>Web Developer, Fresh Grad.</p>
+      </div>
+    </div>
+
+    <section class="mySlides fade">
+      <img src="img\bg-1.jpg" style="width: 100%" />
+
+      <section class="about">
+        <div class="cards">
+          <div class="card brown">
+            <p class="tip">ABOUT ME</p>
+            <p class="second-text">
+              Rose Marie M. Sibulan graduated from Batangas State University
+              with a degree in <br />Bachelor of Science in Information
+              Technology. She has technical skills in Microsoft Office<br />
+              (MS Word, Excel, and PowerPoint) computer literature, and basic
+              programming skills <br />(Php, JavaScript, CSS, HTML).
+            </p>
+          </div>
+          <div class="card blue">
+            <p class="tip">ACHIEVEMENTS</p>
+            <p class="second-text">
+              Completion of CCNAv7: Enterprise Networking, Security, and
+              Automation. <br />
+              Completion of Introduction to IoT.
+              <br />Completion of Cybersecurity Essentials. <br />Consistent
+              Dean's Lister.
+            </p>
+          </div>
+        </div>
+        <!-- <h1>ABOUT ME</h1>
+        <p>
+          Rose Marie M. Sibulan graduated from Batangas State University <br />
+          with a degree of Bachelor of Science in Information Technology.
+          <br />She has technical skills in Microsoft Office (MS Word, Excel,
+          <br />
+          and PowerPoint) computer literature, and basic programming <br />
+          skills (Php, JavaScript, CSS, HTML).
+        </p>
+        <h3>ACHIEVEMENTS</h3>
+        <p2
+          >Completion of CCNAv7: Enterprise Networking, Security, and
+          Automation. Completion of Introduction to IoT. Completion of
+          Cybersecurity Essentials Consistent Dean's Lister.
+        </p2> -->
+      </section>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <footer class="footer">
+      <nav class="footer-socmed">
+        <a href="#"
+          ><i
+            class="bx bxl-github bx-md"
+            style="color: rgba(255, 255, 255, 0.15)"
+          ></i
+        ></a>
+        <a href="#"
+          ><i
+            class="bx bxl-facebook bx-md"
+            style="color: rgba(255, 255, 255, 0.15)"
+          ></i
+        ></a>
+        <a href="#"
+          ><i
+            class="bx bxl-gmail bx-md"
+            style="color: rgba(255, 255, 255, 0.15)"
+          ></i
+        ></a>
+      </nav>
+      <div class="footer-wtvr">
+        <h3>Future's gonna be okay</h3>
+      </div>
+      <div class="footer-name">
+        <p>Copyright &copy; 2023</p>
+
+        <p>All rights reserved by RoseMarieSibulan</p>
+      </div>
+    </footer>
+  </body>
+</html>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
